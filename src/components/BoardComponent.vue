@@ -29,8 +29,9 @@ export default {
   width: calc(80px * 8);
   height: calc(80px * 8);
   display: flex;
-  flex-wrap: wrap;
-  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
 }
 
 .white {
@@ -39,5 +40,12 @@ export default {
 
 .black {
   background: #414141;
+}
+
+@media (max-width : 700px) {
+  .cell {
+    width: 60px;
+    height: 60px;
+  }
 }
 </style>

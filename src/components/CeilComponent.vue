@@ -24,6 +24,12 @@ export default {
   justify-content: center;
 }
 
+@media (max-width : 700px) {
+  .cell {
+    width: 60px;
+    height: 60px;
+  }
+}
 
 
 </style>
