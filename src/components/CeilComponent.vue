@@ -1,5 +1,7 @@
 <template>
-  <div class="cell" v-bind:class="cell.color">
+  <div class="cell" :class="cell.color , {attack: cell.available && !cell.figure}">
+    <img class="figure" v-if="cell.figure" v-bind:src="cell.figure?.logo" alt="Фигура">
+    <div v-if="cell.available && !cell.figure" class="available"></div>
   </div>
 </template>
 
@@ -22,8 +24,43 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
+.figure {
+  width: 80%;
+  height: 80%;
+  position: relative;
+}
+
+.available  {
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background: #81eae1;
+}
+
+.white {
+  background: #858383;
+}
+
+.black {
+  background: #414141;
+}
+
+.attack {
+  background: red;
+}
+
+@media (max-width : 700px) {
+  .cell {
+    width: 60px;
+    height: 60px;
+  }
+}
 
 
 </style>

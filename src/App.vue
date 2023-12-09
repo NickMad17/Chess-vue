@@ -1,8 +1,6 @@
 <template>
   <div class="app">
-    <div class="block"></div>
     <board-component v-bind:board="board"/>
-    <div class="block"></div>
   </div>
 
 </template>
@@ -24,9 +22,8 @@ export default {
     restart () {
       const newBoard = new Board();
       newBoard.initCalls()
+      newBoard.addFigures()
       this.board = newBoard
-      console.log(newBoard, "pwldwld-w-d-w")
-
     }
   },
 
@@ -48,12 +45,7 @@ export default {
   gap: 40px;
 }
 
-.block {
-  width: 300px;
-  height: 80vh;
-  background: #150128;
-  border-radius: 20px;
-}
+
 
 
 </style>
