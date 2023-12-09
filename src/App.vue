@@ -22,9 +22,8 @@ export default {
     restart () {
       const newBoard = new Board();
       newBoard.initCalls()
+      newBoard.addFigures()
       this.board = newBoard
-      console.log(newBoard, "pwldwld-w-d-w")
-
     }
   },
 
@@ -45,6 +44,7 @@ export default {
   align-items: center;
   gap: 40px;
 }
+
 
 
 

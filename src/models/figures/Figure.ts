@@ -1,3 +1,4 @@
+// @ts-ignore
 import logo from "../../assets/black-knight.png"
 import {Colors} from "../Colors";
 import {Cell} from "../Cell";

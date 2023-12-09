@@ -2,7 +2,7 @@
   <div class="board">
     <div v-for="(row, index) of board.cells"
          :key="index">
-        <ceil-component v-bind:cell="cell" class="white" v-for="(cell, index) in row" :key="index"/>
+        <ceil-component :cell="cell" @click="addActive(cell)" :class="{selected: cell?.x === this.selectedSell?.x && cell?.y === this.selectedSell?.y}" v-for="(cell, index) in row" :key="index"/>
     </div>
 
   </div>
@@ -17,6 +17,19 @@ export default {
     board: {
       type: Object,
       required: true
+    }
+  },
+  data () {
+    return {
+      selectedSell: null
+    }
+  },
+
+  methods: {
+    addActive (cell) {
+      if (cell.figure) {
+        this.selectedSell = cell
+      }
     }
   }
 }
@@ -34,12 +47,8 @@ export default {
   flex-wrap: nowrap;
 }
 
-.white {
-  background: #858383;
-}
-
-.black {
-  background: #414141;
+.selected {
+  background: rgba(91, 101, 164, 0.79);
 }
 
 @media (max-width : 700px) {
