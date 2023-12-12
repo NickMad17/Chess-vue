@@ -1,7 +1,30 @@
-# Vue 3 + Vite
+#  Vue Chess
+## Этот проект представляет собой реализацию игры в шахматы с использованием фреймворка Vue.js. Проект использует сборщик Vite и TypeScript (JS для Vue) для разработки.
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Установка:
+1. Убедитесь, что у вас установлен npm.
+2. Склонируйте репозиторий проекта.
+3. Запустите команду
+4.
+```
+   npm install
+```
+для установки необходимых зависимостей.
 
-## Recommended IDE Setup
+Запуск проекта:
+1. Для запуска проекта в режиме разработки используйте команду
+```
+ npm run dev
+```
+3. Откройте браузер и перейдите по адресу http://localhost:3000.
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+Сборка проекта:
+1. Для сборки проекта в production режиме используйте команду npm run build.
+
+Структура проекта:
+- src - содержит исходный код проекта.
+- public - содержит файлы, которые будут скопированы в корень сборки (например, favicon.ico).
+
+Чтобы начать разработку, ознакомьтесь с документацией по Vue.js, Vite и TypeScript.
+
+Благодарим за интерес к проекту 'Шахмоты на Vue'! Если у вас возникли вопросы или предложения, не стесняйтесь обращаться к разработчикам.
