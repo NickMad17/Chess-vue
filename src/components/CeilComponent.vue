@@ -1,18 +1,24 @@
 <template>
-  <div class="cell" :class="cell.color , {attack: cell.available && !cell.figure}">
+  <div class="cell"
+       :class="cell.color,
+        {attack: cell.available && cell.figure}">
     <img class="figure" v-if="cell.figure" v-bind:src="cell.figure?.logo" alt="Фигура">
     <div v-if="cell.available && !cell.figure" class="available"></div>
   </div>
 </template>
 
 <script>
+import {FigureNames} from "../models/figures/Figure.ts";
+
 export default {
-  props:{
+  props: {
     cell: {
       type: Object,
       required: true
     }
-  }
+  },
+
+
 }
 </script>
 
@@ -36,7 +42,7 @@ export default {
   position: relative;
 }
 
-.available  {
+.available {
   height: 12px;
   width: 12px;
   border-radius: 50%;
@@ -52,14 +58,12 @@ export default {
 }
 
 .attack {
-  background: red;
+  background: rgb(255, 0, 0);
+
 }
 
-@media (max-width : 700px) {
-  .cell {
-    width: 60px;
-    height: 60px;
-  }
+.attackWhite {
+  background: rgb(60, 106, 159);
 }
 
 

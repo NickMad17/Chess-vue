@@ -4,13 +4,13 @@ import {Colors} from "../Colors";
 import {Cell} from "../Cell";
 
 export enum FigureNames {
-    FIGURE ="ФИГУРА",
-    KING ="КОРОЛЬ",
-    KNIGHT ="КОНЬ",
-    PAWN ="ПЕШКА",
-    QUEEN ="ФЕРЗЬ",
-    ROOK ="ЛАДЬЯ",
-    BISHOP ="СЛОН",
+    FIGURE = "ФИГУРА",
+    KING = "КОРОЛЬ",
+    KNIGHT = "КОНЬ",
+    PAWN = "ПЕШКА",
+    QUEEN = "ФЕРЗЬ",
+    ROOK = "ЛАДЬЯ",
+    BISHOP = "СЛОН",
 }
 
 export class Figure {
@@ -30,9 +30,15 @@ export class Figure {
         this.id = Date.now();
     }
 
-    canMove(target: Cell) : boolean {
+    canMove(target: Cell): boolean {
+        if (target.figure?.color === this.color)
+            return false
+        // if (target.figure?.name === FigureNames.KING) {
+        //     return false
+        // }
         return true
     }
 
-    moveFigure(target: Cell) {}
+    moveFigure(target: Cell) {
+    }
 }
